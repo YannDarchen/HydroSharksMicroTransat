@@ -1,0 +1,189 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:+36V #PWR?
+U 1 1 5DE69A3D
+P 950 850
+F 0 "#PWR?" H 950 700 50  0001 C CNN
+F 1 "+36V" H 965 1023 50  0000 C CNN
+F 2 "" H 950 850 50  0001 C CNN
+F 3 "" H 950 850 50  0001 C CNN
+	1    950  850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:0 #GND?
+U 1 1 5DE6A0FA
+P 950 1600
+F 0 "#GND?" H 950 1500 50  0001 C CNN
+F 1 "0" H 950 1689 50  0000 C CNN
+F 2 "" H 950 1600 50  0001 C CNN
+F 3 "~" H 950 1600 50  0001 C CNN
+	1    950  1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Zener D?
+U 1 1 5DE6D1A3
+P 1650 1000
+F 0 "D?" V 1696 921 50  0000 R CNN
+F 1 "D_Zener" V 1605 921 50  0000 R CNN
+F 2 "" H 1650 1000 50  0001 C CNN
+F 3 "~" H 1650 1000 50  0001 C CNN
+	1    1650 1000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L pspice:MNMOS M?
+U 1 1 5DE6E96A
+P 2200 950
+F 0 "M?" V 2533 950 50  0000 C CNN
+F 1 "MNMOS" V 2624 950 50  0000 C CNN
+F 2 "" H 2175 950 50  0001 C CNN
+F 3 "~" H 2175 950 50  0001 C CNN
+	1    2200 950 
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2400 750  2400 850 
+Wire Wire Line
+	1650 1150 1650 1300
+Wire Wire Line
+	950  1600 1400 1600
+$Comp
+L Device:R R?
+U 1 1 5DE6AD93
+P 1400 1450
+F 0 "R?" H 1470 1496 50  0000 L CNN
+F 1 "R" H 1470 1405 50  0000 L CNN
+F 2 "" V 1330 1450 50  0001 C CNN
+F 3 "~" H 1400 1450 50  0001 C CNN
+	1    1400 1450
+	1    0    0    -1  
+$EndComp
+Connection ~ 1400 1300
+Wire Wire Line
+	1400 1300 1400 1200
+$Comp
+L Device:R R?
+U 1 1 5DE6BDC4
+P 1400 1050
+F 0 "R?" H 1470 1096 50  0000 L CNN
+F 1 "R" H 1470 1005 50  0000 L CNN
+F 2 "" V 1330 1050 50  0001 C CNN
+F 3 "~" H 1400 1050 50  0001 C CNN
+	1    1400 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Switching:GL2576-12TB5T U?
+U 1 1 5DE7F875
+P 2700 1900
+F 0 "U?" V 2654 2130 50  0000 L CNN
+F 1 "GL2576-12TB5T" V 2745 2130 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-5_Vertical" H 2700 1650 50  0001 L CIN
+F 3 "http://www.dianyuan.com/bbs/u/54/437861181916300.pdf" H 2700 1900 50  0001 C CNN
+	1    2700 1900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3300 850  3300 2000
+Wire Wire Line
+	3300 2000 3200 2000
+$Comp
+L Device:Polyfuse F?
+U 1 1 5DE6BF5C
+P 1200 850
+F 0 "F?" V 975 850 50  0000 C CNN
+F 1 "Polyfuse" V 1066 850 50  0000 C CNN
+F 2 "" H 1250 650 50  0001 L CNN
+F 3 "~" H 1200 850 50  0001 C CNN
+	1    1200 850 
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_DPST_x2 SW?
+U 1 1 5DE6E53E
+P 2000 1300
+F 0 "SW?" H 2000 1535 50  0000 C CNN
+F 1 "SW_DPST_x2" H 2000 1444 50  0000 C CNN
+F 2 "" H 2000 1300 50  0001 C CNN
+F 3 "~" H 2000 1300 50  0001 C CNN
+	1    2000 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 1300 2200 1150
+Wire Wire Line
+	2400 850  3300 850 
+Connection ~ 2400 850 
+Wire Wire Line
+	1050 850  950  850 
+Connection ~ 1400 1200
+Wire Wire Line
+	1400 1200 1400 1150
+Wire Wire Line
+	1350 850  1400 850 
+Connection ~ 1400 1600
+Wire Wire Line
+	1400 1600 1800 1600
+Wire Wire Line
+	1400 900  1400 850 
+Connection ~ 1400 850 
+Wire Wire Line
+	1400 850  1650 850 
+Wire Wire Line
+	1400 1300 1650 1300
+Connection ~ 1650 850 
+Connection ~ 1650 1300
+Wire Wire Line
+	1650 1300 1800 1300
+Wire Wire Line
+	1650 850  2000 850 
+Wire Wire Line
+	2200 1800 1950 1800
+Wire Wire Line
+	1950 1800 1950 2900
+Wire Wire Line
+	1800 1600 1800 2900
+Connection ~ 1800 1600
+Wire Wire Line
+	1800 1600 2700 1600
+$Comp
+L Driver_Motor:DRV8833RTY U?
+U 1 1 5DE97DDF
+P 1800 3650
+F 0 "U?" H 1800 4531 50  0000 C CNN
+F 1 "DRV8833RTY" H 1800 4440 50  0000 C CNN
+F 2 "Package_DFN_QFN:Texas_S-PWQFN-N16_EP2.1x2.1mm_ThermalVias" H 2250 4100 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/drv8833.pdf" H 1650 4200 50  0001 C CNN
+	1    1800 3650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1800 2900 1000 2900
+Wire Wire Line
+	1000 2900 1000 3650
+Wire Wire Line
+	1000 3650 1100 3650
+Wire Wire Line
+	2500 3850 2500 2900
+Wire Wire Line
+	2500 2900 1950 2900
+Wire Wire Line
+	1100 3550 1100 3650
+Connection ~ 1100 3650
+$EndSCHEMATC
